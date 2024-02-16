@@ -8,7 +8,9 @@ button.addEventListener('click',()=>{
     const month = parseInt(document.querySelector(".month").value);
     const year = parseInt(document.querySelector(".year").value);
     if((month === '' || isNaN(month)) && (year === '' || isNaN(year))){
-    document.querySelector(".date-blank-error").style.display = 'block';    
+    document.querySelector(".date-blank-error").style.display = 'block';  
+    document.querySelector(".month").style.borderColor = 'hsl(0, 100%, 66%)';  
+    document.querySelector(".year").style.borderColor = 'hsl(0, 100%, 66%)';  
     }else{
         document.querySelector(".date-blank-error").style.display = 'none'; 
         document.querySelector(".expMonth").innerHTML = `${month}`;
@@ -18,6 +20,7 @@ button.addEventListener('click',()=>{
     const cvc = parseInt(document.querySelector(".cvc-number").value);
     if(isNaN(cvc) || cvc === ''){
         document.querySelector(".cvc-error").style.display = 'block';
+        document.querySelector(".cvc-number").style.borderColor = 'hsl(0, 100%, 66%)';
     }else{
         document.querySelector(".cvc-error").style.display = 'none';
         document.querySelector(".userCvc").innerHTML = `${cvc}`;
@@ -27,6 +30,7 @@ button.addEventListener('click',()=>{
     let number = userInput.replace(/\s/g, '');
     if(userInput.length !== 16 && isNaN(parseInt(number))){
         document.querySelector(".card-number-error").style.display = 'block'
+        document.querySelector(".userCardNumber").style.borderColor = 'hsl(0, 100%, 66%)';
     }else{
         number = number.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
         document.querySelector(".card-number-error").style.display = 'none';
