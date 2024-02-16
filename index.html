@@ -12,43 +12,49 @@
 <div class="container">
   <div class="box-1">
     <div class="user-info">
-      <img src="./images/bg-card-front.png" alt="" class="card-front-side">
       <img src="./images/card-logo.svg" alt="" class="card-logo">
-      <p class="card-number">0000 0000 0000 0000</p>
-      <p class="user">Jane Appleseed</p>
-      <p><span class="expMonth">00</span>/<span class="expYear">00</span></p>
+      <p class="card-number"></p>
+      <p class="user"></p>
+      <p class="cardExpiryDate"><span class="expMonth"></span>/<span class="expYear"></span></p>
     </div>
     <div class="user-cvc">
-      <img src="./images/bg-card-back.png" alt="" class="card-back-side">
-      <p class="userCvs">000</p>
+      <p class="userCvc"></p>
     </div>
   </div>
   <div class="box-2">
-    <form action="">
-      <label for="">cardholder name</label><br>
-      <input type="text" class="userName"><br>
-      <label for="">card number</label><br>
-      <input type="text" class="userCardNumber">
-      <div class="expiry-date">
-        <div class="date">
-          <label for="">exp. date (mm/yy)</label><br>
-          <input type="text" class="month">
-          <input type="text" class="year">
+    <!-- <form action="" class="userInfoOnCard"> -->
+      <div class="userInfoCard">
+        <label class="cardHolder" for="">cardholder name</label><br>
+        <input type="text" class="userName" placeholder="e.g. Jane Appleseed"><br>
+        <label class="cardNumber" for="">card number</label><br>
+        <input type="text" class="userCardNumber" placeholder="e.g. 1234 5678 9123 0000">
+        <p class="card-number-error">Wrong format, numbers only</p>
+        <div class="expiry-date">
+          <div class="date">
+            <label class="dateLabel" for="">exp. date (mm/yy)</label><br>
+            <input type="text" class="month" placeholder="MM">
+            <input type="text" class="year" placeholder="YY">
+            <p class="date-blank-error">can't be blank</p>
+          </div>
+          <div class="cvc">
+            <label class="cardCvc" for="">cvc</label><br>
+            <input type="text" class="cvc-number" placeholder="e.g. 123">
+            <p class="cvc-error">can't be blank</p>
+          </div>
         </div>
-        <div class="cvc">
-          <label for="">cvc</label><br>
-          <input type="text" class="cvc-number">
-        </div>
+        <button class="btn">Confirm</button>
       </div>
-      <button class="btn">Confirm</button>
-    </form>
+    <!-- </form> -->
+
+    <div class="complete-state">
+      <img src="./images/icon-complete.svg" alt="" class="complete">
+      <h1>Thank you</h1>
+      <p>We've added your card details</p>
+      <button class="complete-btn">Continue</button>
+    </div>
   </div>
 </div>
 
-  <!-- Thank you!
-  We've added your card details
-  Continue
-   -->
 </body>
 <script src="app.js"></script>
 </html>
